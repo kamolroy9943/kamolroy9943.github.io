@@ -1,0 +1,166 @@
+$dark-overlay: rgba(0, 0, 0, 0.7);
+@mixin p {
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar-nav { 
+  margin-left: auto;
+  flex-direction: row;
+  .social-icon{
+    
+    font-size: 26px;
+  }
+}
+
+#home-section {
+  background: url('../img/header1.jpg') no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 700px;
+  .dark-overlay {
+    background-color: $dark-overlay;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    .header-inner {
+      padding-top: 150px;
+      .itemsHead {
+        h2 {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          text-transform: capitalize;
+          font-size: 90px;
+        }
+        h3 {
+          font-family: 'Raleway', sans-serif;
+          font-size: 55px;
+        }
+        p {
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+        .btnBlue {
+          background-color: rgba(51, 122, 183, 0.82);
+          border: none;
+          color: white;
+          padding: 12px 32px;
+          text-align: center;
+          font-size: 18px;
+          margin: 4px 6px;
+          opacity: 0.6;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .btnBlue:hover {
+          opacity: 2
+        }
+
+        .btnRed {
+          background-color: #f4511e;
+          border: none;
+          color: white;
+          padding: 12px 32px;
+          text-align: center;
+          font-size: 18px;
+          margin: 4px 6px;
+          opacity: 0.6;
+          transition: 0.3s;
+          display: inline-block;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        .btnRed:hover {
+          opacity: 1
+        }
+      }
+    }
+  }
+}
+
+// ABOUT SECTION 
+#about {
+  .titleSection {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-transform: capitalize;
+    line-height: 45px;
+    font-size: 35px;
+  }
+  p {
+    @include p;
+    line-height: 2;
+    margin: 0 0 10px;
+  }
+  .dow-cv {
+    background: transparent;
+    text-transform: initial;
+    padding: 6px 0;
+    border-radius: 0;
+    border-bottom: 1px solid #404040;
+    transition: all 0.5s ease 0s;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+  }
+  .dow-cv:hover {
+    border-bottom: 1px solid #f1d37d;
+  }
+  .aboutMe {
+    position: relative;
+    overflow: hidden;
+  }
+  .aboutPicture {
+    position: relative;
+    overflow: hidden;
+    .picone img {
+      margin-left: 35%;
+      height: 314px;
+      margin-top: 20%;
+      box-shadow: 0 6px 13px rgba(0, 0, 0, 0.15);
+    }
+    .pictwo img {
+      height: 410px;
+    }
+  }
+}
+
+// SERVICES SECTION
+#services {
+  background-color: #F3F3F3;
+}
+
+// PORTFOLIO
+#portfolio {
+  .titles-section {
+    h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
+      text-transform: capitalize;
+      line-height: 45px;
+      font-size: 35px;
+      position: relative;
+      z-index: 2;
+  }
+    margin-bottom: 3%;
+    text-align: center;
+
+    p {
+      width: 60%;
+      margin: auto;
+      line-height: 2;
+    }
+  }
+}
